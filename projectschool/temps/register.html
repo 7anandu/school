@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <title>Registration</title>
+</head>
+<body>
+<div align="center">
+    <h2 style="font-family:verdana;color:blue;">REGISTRATION</h2>
+    <form  action="{% url 'register' %}" method="post">
+        {% csrf_token %}<label style="font-size:160%">USERNAME:</label>
+    <input type="text" name="username" placeholder="enter your uname"><br><br>
+    <label style="font-size:160%">PASSWORD:</label>
+    <input type="password" name="password" placeholder="enter your password"><br><br>
+    <label style="font-size:160%">CONFIRM:</label>
+    <input type="password" name="password1" placeholder="confirm your password"><br><br>
+    <input class ="btn btn-primary" type="submit" value="submit">
+</form>
+</div>
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor %}
+</body>
+</html>

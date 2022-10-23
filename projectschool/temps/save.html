@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><br><br>
+{% for i in form1 %}
+name:{{i.name}}<br>
+gender:{{i.gender}}<br>
+{{i.Address}}
+{% endfor %}
+    <h2><p>order is confirmed</p></h2>
+ <a href="{% url 'home_page' %}">home</a>
+ </center>
+</body>
+</html>
